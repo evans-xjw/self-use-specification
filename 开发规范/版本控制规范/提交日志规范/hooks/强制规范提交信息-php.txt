@@ -1,0 +1,21 @@
+<?php
+# 检查提交信息是否满足规范
+# 1.强制行每行以 [ 开头，以 ] 结尾
+# 2.第一行为代码行为枚举，比如枚举项为：add、delete、update、migrate、fix、test、revert、refactor、optimize、doc、style、build
+# 3.第二行为改动范围枚举，比如枚举项为：api、openapi、admin、command、collector、job、outsource、ows、engine
+# 4 第三行为精简提交描述,长度范围为8-24
+# ********demo********
+#[api]
+#[admin]
+#[催收-催记-同步RPC-V1]
+# ********demo********
+
+$commitMessage = $args[1];
+$typeEnums = 'add|delete|update|migrate|fix|test|revert|refactor|optimize|doc|style|build';
+$scopeEnums = 'api|openapi|admin|command|collector|job|outsource|ows|engine';
+preg.match('/^\[($typeEnums)\](\\n|\\r\\n|\\r)\[($scopeEnums)\](\\n|\\r\\n|\\r)\[(.){8,24}\]$/',$commitMessage,$match)
+if (empty($mathc[0])) {
+    echo 'The format of the commit log is incorrect!|提交日志不规范';
+    exit(1)
+}
+

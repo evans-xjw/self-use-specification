@@ -1,0 +1,9 @@
+#!/bin/sh
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [[ "$BRANCH" =~ ^dev_\d{1}.\d{1}.\d{1}_\w{1,32}$ ]]; then
+    exit 0
+fi
+echo 'Branch naming is not standardized|分支命名不规范'
+exit 1

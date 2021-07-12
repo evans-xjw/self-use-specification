@@ -1,0 +1,117 @@
+{
+    "ci-template": "[${type}]\n[${scope}]\n[${desc}]\n${long-desc}",
+    "types": [
+        {
+            "name": "add",
+            "title": "add        ",
+            "desc": "常规新增"
+        },
+        {
+            "name": "delete",
+            "title": "delete    ",
+            "desc": "常规删减"
+        },
+        {
+            "name": "update",
+            "title": "update  ",
+            "desc": "常规更新"
+        },
+        {
+            "name": "migrate",
+            "title": "migrate ",
+            "desc": "同步迁移"
+        },
+        {
+            "name": "fix",
+            "title": "fix           ",
+            "desc": "缺陷修复"
+        },
+        {
+            "name": "test",
+            "title": "test         ",
+            "desc": "测试验证"
+        },
+        {
+            "name": "revert",
+            "title": "revert     ",
+            "desc": "撤销或回滚"
+        },
+        {
+            "name": "refactor",
+            "title": "refactor  ",
+            "desc": "设计与重构"
+        },
+        {
+            "name": "optimize",
+            "title": "optimize",
+            "desc": "优化与性能"
+        },
+        {
+            "name": "doc",
+            "title": "doc         ",
+            "desc": "文档与注释"
+        },
+        {
+            "name": "style",
+            "title": "style       ",
+            "desc": "样式与格式"
+        },
+        {
+            "name": "build",
+            "title": "build      ",
+            "desc": "构建与部署"
+        }
+    ],
+    "scopes": [
+        {
+            "name": "controller",
+            "title": "controller-控制层改动",
+            "desc": "控制层改动"
+        },
+        {
+            "name": "service",
+            "title": "service-业务层改动",
+            "desc": "业务层改动"
+        },
+        {
+            "name": "model",
+            "title": "model-模型层改动",
+            "desc": "模型层改动"
+        },
+        {
+            "name": "dao",
+            "title": "dao-dao层改动",
+            "desc": "dao层改动"
+        },
+        {
+            "name": "view",
+            "title": "view-视图层改动",
+            "desc": "视图层改动"
+        },
+        {
+            "name": "presenter",
+            "title": "presenter-",
+            "desc": "视图组件改动"
+        },
+        {
+            "name": "trait",
+            "title": "trait",
+            "desc": "复用类改动"
+        },
+        {
+            "name": "util",
+            "title": "util",
+            "desc": "工具类改动"
+        },
+        {
+            "name": "config",
+            "title": "config",
+            "desc": "配置文件改动"
+        },
+        {
+            "name": "other",
+            "title": "other",
+            "desc": "其他改动"
+        }
+    ]
+}

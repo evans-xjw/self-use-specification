@@ -1,0 +1,41 @@
+#!/bin/bash
+
+files=$(git diff --cached --name-only | grep -E '\.php$')
+echo $files
+
+# 如果文件列表为空，退出执行环境，继续执行commit操作
+if [[ $files = "" ]] ; then
+    exit 0
+fi
+
+failed=0
+
+# 循环文件列表
+for file in ${files}; do
+    if [ ! -e $file ] ; then
+        continue
+    fi
+
+    grep -E "#test|# test| dd\(|}dd\(|;dd\(|\tdd\(|^dd\(" $file > /dev/null
+    if [ $? -eq 0 ]; then
+        echo "❌ Found debug code!"
+        exit 1
+    fi
+
+    ~/.composer/vendor/bin/phpcbf $file --standard=PSR2
+    if [[ $? != 0 ]] ; then
+        git add $file
+        git commit
+    fi
+    git show :$file | php -l $file
+    if [[ $? != 0 ]] ; then
+        failed=1
+    fi
+done;
+
+# 有文件未通过检验，退出执行环境，中断commit操作
+if [[ $failed != 0 ]] ; then
+    echo "❌ ESLint failed, git commit denied"
+fi
+
+exit $failed

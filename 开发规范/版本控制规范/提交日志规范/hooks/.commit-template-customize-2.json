@@ -1,0 +1,117 @@
+{
+    "ci-template": "[${type}]\n[${scope}]\n[${desc}]\n${long-desc}",
+    "types": [
+        {
+            "name": "add",
+            "title": "add        ",
+            "desc": "常规新增"
+        },
+        {
+            "name": "delete",
+            "title": "delete    ",
+            "desc": "常规删减"
+        },
+        {
+            "name": "update",
+            "title": "update  ",
+            "desc": "常规更新"
+        },
+        {
+            "name": "migrate",
+            "title": "migrate ",
+            "desc": "同步迁移"
+        },
+        {
+            "name": "fix",
+            "title": "fix           ",
+            "desc": "缺陷修复"
+        },
+        {
+            "name": "test",
+            "title": "test         ",
+            "desc": "测试验证"
+        },
+        {
+            "name": "revert",
+            "title": "revert     ",
+            "desc": "撤销或回滚"
+        },
+        {
+            "name": "refactor",
+            "title": "refactor  ",
+            "desc": "设计与重构"
+        },
+        {
+            "name": "optimize",
+            "title": "optimize",
+            "desc": "优化与性能"
+        },
+        {
+            "name": "doc",
+            "title": "doc         ",
+            "desc": "文档与注释"
+        },
+        {
+            "name": "style",
+            "title": "style       ",
+            "desc": "样式与格式"
+        },
+        {
+            "name": "build",
+            "title": "build      ",
+            "desc": "构建与部署"
+        }
+    ],
+    "scopes": [
+        {
+            "name": "api",
+            "title": "api-api模块",
+            "desc": "api模块"
+        },
+        {
+            "name": "open-api",
+            "title": "open-api-open-api模块",
+            "desc": "open-api模块"
+        },
+        {
+            "name": "admin",
+            "title": "admin-admin模块",
+            "desc": "admin模块"
+        },
+        {
+            "name": "command",
+            "title": "command-command模块",
+            "desc": "command模块"
+        },
+        {
+            "name": "job",
+            "title": "job-job模块",
+            "desc": "job模块"
+        },
+        {
+            "name": "rpc-server",
+            "title": "rpc-server-rpc-server模块",
+            "desc": "rpc-server模块"
+        },
+        {
+            "name": "outsource",
+            "title": "outsource-outsource模块",
+            "desc": "outsource模块"
+        },
+        {
+            "name": "ows",
+            "title": "ows-ows模块",
+            "desc": "ows模块"
+        },
+        {
+            "name": "collector",
+            "title": "collector-collector模块",
+            "desc": "collector模块"
+        },
+        {
+            "name": "engine",
+            "title": "engine-engine模块",
+            "desc": "engine模块"
+        }
+    ]
+}
