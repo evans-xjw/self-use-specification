@@ -9,6 +9,7 @@ use PhpCsFixer\Finder;
  * (官方)参考配置文档(更全更新)：https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/3.0/doc/rules
  * (推荐)参考配置文档(可读性高，同时支持版本切换和搜索)：https://mlocati.github.io/php-cs-fixer-configurator/#version:3.0
  * Q1:IDE中链式调用方法对齐的选项在php-cs-fixer中暂未找到对应参数.
+ * Q2:配置类属性对齐时，IDE和php-cs-fixer存在冲突.
  */
 $rules = [
     /*------------------------------------------------------规则源------------------------------------------------------*/
@@ -32,7 +33,14 @@ $rules = [
     //二元运算符应按配置用空格包围
     'binary_operator_spaces'                      => [
         'default'   => 'single_space',
-        'operators' => ['=>' => 'align_single_space'],
+        'operators' => [
+            '=>' => 'align_single_space',
+            '='  => 'align_single_space',
+            //            '|'   => 'no_space',
+            //            '===' => 'align_single_space_minimal',
+            //            '+='  => 'align_single_space',
+            //            'xor' => null,
+        ],
     ],
     //强制转换和变量之间应该有一个空格或没有空格
     'cast_spaces'                                 => true,
